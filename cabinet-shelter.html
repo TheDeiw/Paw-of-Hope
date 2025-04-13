@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <title>Кабінет Закладу</title>
+  <link rel="stylesheet" href="css/cabinet-shelter.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo">
+				<img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
+			</div>
+
+			<nav class="header__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#">Новини</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Пошук організації</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Знайти тваринку</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Створити оголошення</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Про нас</a>
+					</li>
+				</ul>
+			</nav>
+
+			<menu class="header__auth-menu">
+				<button class="auth-menu__btn green-btn login-btn">Увійти</button>
+				<button class="auth-menu__btn green-btn register-btn">
+					Зареєструватися
+				</button>
+			</menu>
+		</div>
+	</header>
+
+	<main class="main-content">
+		<section class="animal-list">
+		  <div class="controls">
+			 <button class="btn active">Список тварин</button>
+			 <button class="btn">Подати заявку</button>
+		  </div>
+  
+		  <div class="animals">
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Ізя</h3>
+				  <p>дівчинка, 1 рік</p>
+				  <p>Короткий опис тваринки</p>
+				</div>
+			 </div>
+			 <!-- Додані тварини для прикладу -->
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Бім</h3>
+				  <p>хлопчик, 3 роки</p>
+				  <p>Веселий та дружелюбний</p>
+				</div>
+			 </div>
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Луна</h3>
+				  <p>дівчинка, 2 роки</p>
+				  <p>Спокійна та лагідна</p>
+				</div>
+			 </div>
+			 <!-- Інші картки за бажанням -->
+		  </div>
+		</section>
+  
+		<aside class="shelter-info-cab">
+		  <div class="shelter-card">
+			 <div class="shelter-logo">
+				<img src="assets/img/zaklad_logo.png" alt="Аватар закладу">
+			 </div>
+			 <div class="shelter-details">
+				<h2>Назва Закладу</h2>
+				<span>#категорія_закладу</span>
+				<p class="description">Основна загальна інформація для ознайомлення чим займається заклад.</p>
+				<p class="address">вул. Така-то, м. Сяке-то, обл. Така, Україна</p>
+				<p class="phone">+380909090909</p>
+				<p class="email">paw.hope@gmail.com</p>
+				<div class="donate-box">
+				  <p>Номер банківської карти: <strong>1111 1111 1111 1111</strong></p>
+				  <a class="donate-link" href="#">ПОСИЛАННЯ НА БАНКУ</a>
+				</div>
+			 </div>
+			 <button class="btn-secondary">До вподобаних</button>
+		  </div>
+		</aside>
+  </main>
+
+  <footer class="footer">
+	<nav class="footer__nav">
+		<div class="footer__nav-lists">
+			<h5 class="footer__nav__lists-heading">Navigation</h5>
+
+			<div class="footer__nav__lists__container">
+				<ul class="footer__nav__list">
+					<li class="footer__nav__item"><a href="#">Допомогти</a></li>
+					<li class="footer__nav__item"><a href="#">Блог</a></li>
+				</ul>
+				<ul class="footer__nav__list">
+					<li class="footer__nav__item"><a href="#">Новини</a></li>
+					<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<ul class="footer__nav__documents">
+			<li class="footer__nav__document"><a href="#">Copyright</a></li>
+			<li class="footer__nav__document"><a href="#">Privacy</a></li>
+			<li class="footer__nav__document">
+				<a href="#">All right reserved</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="footer__links">
+		<div class="footer__follow-us">
+			<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+
+			<menu class="follow-us__menu">
+				<button class="follow-us__btn">
+					<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+				</button>
+				<button class="follow-us__btn">
+					<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+				</button>
+				<button class="follow-us__btn">
+					<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+				</button>
+				<button class="follow-us__btn">
+					<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+				</button>
+			</menu>
+		</div>
+
+		<div class="footer__contacts">
+			<h5 class="contacts__heading">Контакти</h5>
+
+			<p class="footer__contact">
+				Пані Олена:
+				<br />
+				+380 (67) 843 2730
+			</p>
+		</div>
+	</div>
+</footer>
+</body>
+</html>
