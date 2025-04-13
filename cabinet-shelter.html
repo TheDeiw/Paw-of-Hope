@@ -9,18 +9,36 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header class="header" id="header"></header>
-
+	<header class="header">
+		<div class="header__container">
+		  <div class="header__logo">
+			<img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
+		  </div>
+		  <nav class="header__nav">
+			<ul class="nav__list">
+			  <li class="nav__item"><a href="#">Новини</a></li>
+			  <li class="nav__item"><a href="#">Пошук організації</a></li>
+			  <li class="nav__item"><a href="#">Знайти тваринку</a></li>
+			  <li class="nav__item"><a href="#">Створити оголошення</a></li>
+			  <li class="nav__item"><a href="#">Про нас</a></li>
+			</ul>
+		  </nav>
+		  <menu class="header__auth-menu">
+			<button class="auth-menu__btn green-btn login-btn">Увійти</button>
+			<button class="auth-menu__btn green-btn register-btn">Зареєструватися</button>
+		  </menu>
+		</div>
+	  </header>
+	  
 	<main class="main-content">
-		
-		<section class="animal-list">
+		<div class="for-edit" id="for-edit"></div>
+		<section class="animal-list" id="animal-list">
 		  <div class="controls">
 			 <button class="btn active">Список тварин</button>
 			 <button onclick="submitAnApplication()" class="btn">Подати заявку</button>
 		  </div>
 		  <button class="add-btn">+ Додати</button>
 		  <div class="animals">
-			 
 			 <div class="animal">
 				<img src="assets/img/Izia.png" alt="Фото тваринки">
 				<div class="info">
@@ -48,17 +66,107 @@
 		  </div>
 		</section>
   
-		<aside class="shelter-info-cab">
-		  
-			<div class="shelter-head">
-				<div class="shelter-logo">
-					<img src="assets/img/zaklad_logo.png" alt="Аватар закладу">
+		<aside class="shelter-info-cab" id="shelter-info-cab">
+			<div class="shelter-inform">
+				<div class="shelter-head">
+					<div class="shelter-logo">
+						<img src="assets/img/zaklad_logo.png" alt="Аватар закладу" id="profile-image">
+						<button class="change-image-btn" id="change-image-btn" style="display: none;">Змінити зображення</button>
+					</div>
+					<div class="shelter-name">
+						<h2>Назва Закладу</h2>
+						<span class="italic">#категорія_закладу</span>
+						<button class="edit-btn" id="edit-profile-btn">Редагувати профіль</button>
+					</div>
 				</div>
-				<div class="shelter-name">
-					<h2>Назва Закладу</h2>
-					<span class="italic">#категорія_закладу</span>
+				<div class="shelter-card">
+					<div class="shelter-details">
+						<div class="description" id="description-static">
+							<p>Основна загальна інформація для ознайомлення чим займається заклад.</p>
+						</div>
+						<div class="description edit-field" id="description-edit" style="display: none;">
+							<textarea rows="3">Основна загальна інформація для ознайомлення чим займається заклад.</textarea>
+						</div>
+						<div class="contact-info" id="contact-info-static">
+							<div class="address">
+								<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
+								<p>вул. Така-то, м. Сяке-то, обл. Така, Україна</p>
+							</div>
+							<div class="phone">
+								<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+								<p>+380909090909</p>
+							</div>
+							<div class="email">
+								<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+								<p>paw.hope@gmail.com</p>
+							</div>
+						</div>
+						<div class="contact-info edit-field" id="contact-info-edit" style="display: none;">
+							<div class="address-section">
+								<div class="address">
+									<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
+									<input type="text" value="вул. Така-то, м. Сяке-то, обл. Така, Україна" />
+									<button class="remove-contact-btn">×</button>
+								</div>
+								<button class="add-contact-btn add-address-btn">+</button>
+							</div>
+							<div class="phone-section">
+								<div class="phone">
+									<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+									<input type="text" value="+380909090909" />
+									<button class="remove-contact-btn">×</button>
+								</div>
+								<button class="add-contact-btn add-phone-btn">+</button>
+							</div>
+							<div class="email-section">
+								<div class="email">
+									<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+									<input type="email" value="paw.hope@gmail.com" />
+									<button class="remove-contact-btn">×</button>
+								</div>
+								<button class="add-contact-btn add-email-btn">+</button>
+							</div>
+						</div>
+						<div class="donate-box" id="donate-box-static">
+							<div class="donate-head">
+								<img src="assets/img/money-icon.svg" alt="Гроші для підтримки">
+								<p><strong>Для підтримки</strong></p>
+							</div>
+							<p>Номер банківської карти: <strong>1111 1111 1111 1111</strong></p>
+							<a class="donate-link" href="https://example.com">ПОСИЛАННЯ НА БАНКУ</a>
+						</div>
+						<div class="donate-box edit-field" id="donate-box-edit" style="display: none;">
+							<div class="donate-head">
+								<img src="assets/img/money-icon.svg" alt="Гроші для підтримки">
+								<p><strong>Для підтримки</strong></p>
+							</div>
+							<div class="donate-toggle">
+								<label>
+									<input type="checkbox" id="has-donate" checked>
+									Додати реквізити для підтримки
+								</label>
+							</div>
+							<div id="donate-details" style="display: block;">
+								<div class="donate-field">
+									<p>Номер банківської карти:</p>
+									<input type="text" id="card-number" value="1111 1111 1111 1111" />
+								</div>
+								<div class="donate-field">
+									<p>Посилання на банку:</p>
+									<input type="text" id="bank-link" value="https://example.com" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="edit-actions-container" id="edit-actions" style="display: none;">
+						<div class="edit-actions">
+							<button class="cancel-btn">Скасувати</button>
+							<button class="save-btn">Зберегти</button>
+						</div>
+					</div>
 				</div>
 			</div>
+
 			<div class="shelter-card">
 			 <div class="shelter-details">
 				<p class="description">Основна загальна інформація для ознайомлення чим займається заклад.</p>
@@ -89,65 +197,313 @@
 			<div class="shelter-info-footer"></div>
 				
 		</aside>
-  </main>
+	</main>
 
-  <footer class="footer">
-	<nav class="footer__nav">
-		<div class="footer__nav-lists">
-			<h5 class="footer__nav__lists-heading">Navigation</h5>
-
-			<div class="footer__nav__lists__container">
-				<ul class="footer__nav__list">
-					<li class="footer__nav__item"><a href="#">Допомогти</a></li>
-					<li class="footer__nav__item"><a href="#">Блог</a></li>
-				</ul>
-				<ul class="footer__nav__list">
-					<li class="footer__nav__item"><a href="#">Новини</a></li>
-					<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
-				</ul>
+	<footer class="footer">
+		<nav class="footer__nav">
+			<div class="footer__nav-lists">
+				<h5 class="footer__nav__lists-heading">Navigation</h5>
+				<div class="footer__nav__lists__container">
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Допомогти</a></li>
+						<li class="footer__nav__item"><a href="#">Блог</a></li>
+					</ul>
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Новини</a></li>
+						<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="footer__nav__documents">
+				<li class="footer__nav__document"><a href="#">Copyright</a></li>
+				<li class="footer__nav__document"><a href="#">Privacy</a></li>
+				<li class="footer__nav__document"><a href="#">All right reserved</a></li>
+			</ul>
+		</nav>
+		<div class="footer__links">
+			<div class="footer__follow-us">
+				<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+				<menu class="follow-us__menu">
+					<button class="follow-us__btn">
+						<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+					</button>
+				</menu>
+			</div>
+			<div class="footer__contacts">
+				<h5 class="contacts__heading">Контакти</h5>
+				<p class="footer__contact">
+					Пані Олена:<br />
+					+380 (67) 843 2730
+				</p>
 			</div>
 		</div>
+	</footer>
+	<script>
+		const editProfileBtn = document.getElementById('edit-profile-btn');
+		const forEditOverlay = document.getElementById('for-edit');
+		const shelterInfoCab = document.getElementById('shelter-info-cab');
+		const animalList = document.getElementById('animal-list');
+		const editActions = document.getElementById('edit-actions');
+		const descriptionStatic = document.getElementById('description-static');
+		const descriptionEdit = document.getElementById('description-edit');
+		const contactInfoStatic = document.getElementById('contact-info-static');
+		const contactInfoEdit = document.getElementById('contact-info-edit');
+		const donateBoxStatic = document.getElementById('donate-box-static');
+		const donateBoxEdit = document.getElementById('donate-box-edit');
+		const cancelBtn = document.querySelector('.cancel-btn');
+		const saveBtn = document.querySelector('.save-btn');
+		const addAddressBtn = document.querySelector('.add-address-btn');
+		const addPhoneBtn = document.querySelector('.add-phone-btn');
+		const addEmailBtn = document.querySelector('.add-email-btn');
+		const hasDonateCheckbox = document.getElementById('has-donate');
+		const donateDetails = document.getElementById('donate-details');
+		const changeImageBtn = document.getElementById('change-image-btn');
 
-		<ul class="footer__nav__documents">
-			<li class="footer__nav__document"><a href="#">Copyright</a></li>
-			<li class="footer__nav__document"><a href="#">Privacy</a></li>
-			<li class="footer__nav__document">
-				<a href="#">All right reserved</a>
-			</li>
-		</ul>
-	</nav>
+		let isEditMode = false;
+		let addresses = ['вул. Така-то, м. Сяке-то, обл. Така, Україна'];
+		let phones = ['+380909090909'];
+		let emails = ['paw.hope@gmail.com'];
+		let hasDonate = true;
+		let cardNumber = '1111 1111 1111 1111';
+		let bankLink = 'https://example.com';
 
-	<div class="footer__links">
-		<div class="footer__follow-us">
-			<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+		editProfileBtn.addEventListener('click', () => {
+			isEditMode = !isEditMode;
+			toggleEditMode();
+		});
 
-			<menu class="follow-us__menu">
-				<button class="follow-us__btn">
-					<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
-				</button>
-				<button class="follow-us__btn">
-					<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
-				</button>
-				<button class="follow-us__btn">
-					<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
-				</button>
-				<button class="follow-us__btn">
-					<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
-				</button>
-			</menu>
-		</div>
+		cancelBtn.addEventListener('click', () => {
+			isEditMode = false;
+			// Restore previous state
+			addresses = contactInfoStatic.querySelectorAll('.address p').length 
+				? Array.from(contactInfoStatic.querySelectorAll('.address p')).map(p => p.textContent) 
+				: ['вул. Така-то, м. Сяке-то, обл. Така, Україна'];
+			phones = contactInfoStatic.querySelectorAll('.phone p').length 
+				? Array.from(contactInfoStatic.querySelectorAll('.phone p')).map(p => p.textContent) 
+				: ['+380909090909'];
+			emails = contactInfoStatic.querySelectorAll('.email p').length 
+				? Array.from(contactInfoStatic.querySelectorAll('.email p')).map(p => p.textContent) 
+				: ['paw.hope@gmail.com'];
+			hasDonate = donateBoxStatic.querySelector('.donate-head') !== null; // Check if donate section exists
+			if (hasDonate) {
+				cardNumber = donateBoxStatic.querySelector('p strong')?.textContent || '1111 1111 1111 1111';
+				bankLink = donateBoxStatic.querySelector('a')?.getAttribute('href') || 'https://example.com';
+			}
+			toggleEditMode();
+		});
 
-		<div class="footer__contacts">
-			<h5 class="contacts__heading">Контакти</h5>
+		saveBtn.addEventListener('click', () => {
+			isEditMode = false;
+			saveChanges();
+			toggleEditMode();
+		});
 
-			<p class="footer__contact">
-				Пані Олена:
-				<br />
-				+380 (67) 843 2730
-			</p>
-		</div>
-	</div>
-</footer>
-<script src="./js/registration_logic.js"></script>
+		addAddressBtn.addEventListener('click', () => {
+			addresses.push('');
+			renderContacts();
+		});
+
+		addPhoneBtn.addEventListener('click', () => {
+			phones.push('');
+			renderContacts();
+		});
+
+		addEmailBtn.addEventListener('click', () => {
+			emails.push('');
+			renderContacts();
+		});
+
+		changeImageBtn.addEventListener('click', () => {
+			const input = document.createElement('input');
+			input.type = 'file';
+			input.accept = 'image/*';
+			input.onchange = (e) => {
+				const file = e.target.files[0];
+				if (file) {
+					const reader = new FileReader();
+					reader.onload = (event) => {
+						document.getElementById('profile-image').src = event.target.result;
+					};
+					reader.readAsDataURL(file);
+				}
+			};
+			input.click();
+		});
+
+		hasDonateCheckbox.addEventListener('change', () => {
+			hasDonate = hasDonateCheckbox.checked;
+			donateDetails.style.display = hasDonate ? 'block' : 'none';
+		});
+
+		function toggleEditMode() {
+			if (isEditMode) {
+				forEditOverlay.style.display = 'block';
+				shelterInfoCab.style.flex = '2';
+				animalList.style.flex = '1';
+				editActions.style.display = 'block';
+				editProfileBtn.style.display = 'none';
+				descriptionStatic.style.display = 'none';
+				descriptionEdit.style.display = 'block';
+				contactInfoStatic.style.display = 'none';
+				contactInfoEdit.style.display = 'block';
+				donateBoxStatic.style.display = 'none';
+				donateBoxEdit.style.display = 'block';
+				changeImageBtn.style.display = 'block';
+				// Set initial values for edit mode
+				document.getElementById('card-number').value = cardNumber;
+				document.getElementById('bank-link').value = bankLink;
+				hasDonateCheckbox.checked = hasDonate;
+				donateDetails.style.display = hasDonate ? 'block' : 'none';
+				renderContacts();
+			} else {
+				forEditOverlay.style.display = 'none';
+				shelterInfoCab.style.flex = '1';
+				animalList.style.flex = '2';
+				editActions.style.display = 'none';
+				editProfileBtn.style.display = 'block';
+				descriptionStatic.style.display = 'block';
+				descriptionEdit.style.display = 'none';
+				contactInfoStatic.style.display = 'block';
+				contactInfoEdit.style.display = 'none';
+				donateBoxStatic.style.display = hasDonate ? 'block' : 'none';
+				donateBoxEdit.style.display = 'none';
+				changeImageBtn.style.display = 'none';
+			}
+		}
+
+		function renderContacts() {
+			const addressSection = contactInfoEdit.querySelector('.address-section');
+			const phoneSection = contactInfoEdit.querySelector('.phone-section');
+			const emailSection = contactInfoEdit.querySelector('.email-section');
+
+			// Render addresses
+			addressSection.innerHTML = '';
+			addresses.forEach((address, index) => {
+				const addressDiv = document.createElement('div');
+				addressDiv.classList.add('address');
+				addressDiv.innerHTML = `
+					<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
+					<input type="text" value="${address}" />
+					<button class="remove-contact-btn">×</button>
+				`;
+				addressDiv.querySelector('input').addEventListener('input', (e) => {
+					addresses[index] = e.target.value;
+				});
+				addressDiv.querySelector('.remove-contact-btn').addEventListener('click', () => {
+					addresses.splice(index, 1);
+					renderContacts();
+				});
+				addressSection.appendChild(addressDiv);
+			});
+			addressSection.appendChild(addAddressBtn);
+
+			// Render phones
+			phoneSection.innerHTML = '';
+			phones.forEach((phone, index) => {
+				const phoneDiv = document.createElement('div');
+				phoneDiv.classList.add('phone');
+				phoneDiv.innerHTML = `
+					<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+					<input type="text" value="${phone}" />
+					<button class="remove-contact-btn">×</button>
+				`;
+				phoneDiv.querySelector('input').addEventListener('input', (e) => {
+					phones[index] = e.target.value;
+				});
+				phoneDiv.querySelector('.remove-contact-btn').addEventListener('click', () => {
+					phones.splice(index, 1);
+					renderContacts();
+				});
+				phoneSection.appendChild(phoneDiv);
+			});
+			phoneSection.appendChild(addPhoneBtn);
+
+			// Render emails
+			emailSection.innerHTML = '';
+			emails.forEach((email, index) => {
+				const emailDiv = document.createElement('div');
+				emailDiv.classList.add('email');
+				emailDiv.innerHTML = `
+					<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+					<input type="email" value="${email}" />
+					<button class="remove-contact-btn">×</button>
+				`;
+				emailDiv.querySelector('input').addEventListener('input', (e) => {
+					emails[index] = e.target.value;
+				});
+				emailDiv.querySelector('.remove-contact-btn').addEventListener('click', () => {
+					emails.splice(index, 1);
+					renderContacts();
+				});
+				emailSection.appendChild(emailDiv);
+			});
+			emailSection.appendChild(addEmailBtn);
+		}
+
+		function saveChanges() {
+			// Save description
+			const newDescription = descriptionEdit.querySelector('textarea').value;
+			descriptionStatic.querySelector('p').textContent = newDescription;
+
+			// Save addresses, phones, and emails
+			contactInfoStatic.innerHTML = '';
+			addresses = addresses.filter(address => address.trim() !== '');
+			phones = phones.filter(phone => phone.trim() !== '');
+			emails = emails.filter(email => email.trim() !== '');
+			addresses.forEach(address => {
+				const addressDiv = document.createElement('div');
+				addressDiv.classList.add('address');
+				addressDiv.innerHTML = `
+					<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
+					<p>${address}</p>
+				`;
+				contactInfoStatic.appendChild(addressDiv);
+			});
+			phones.forEach(phone => {
+				const phoneDiv = document.createElement('div');
+				phoneDiv.classList.add('phone');
+				phoneDiv.innerHTML = `
+					<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+					<p>${phone}</p>
+				`;
+				contactInfoStatic.appendChild(phoneDiv);
+			});
+			emails.forEach(email => {
+				const emailDiv = document.createElement('div');
+				emailDiv.classList.add('email');
+				emailDiv.innerHTML = `
+					<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+					<p>${email}</p>
+				`;
+				contactInfoStatic.appendChild(emailDiv);
+			});
+
+			// Save bank details
+			hasDonate = hasDonateCheckbox.checked;
+			if (hasDonate) {
+				cardNumber = document.getElementById('card-number').value;
+				bankLink = document.getElementById('bank-link').value;
+				donateBoxStatic.innerHTML = `
+					<div class="donate-head">
+						<img src="assets/img/money-icon.svg" alt="Гроші для підтримки">
+						<p><strong>Для підтримки</strong></p>
+					</div>
+					<p>Номер банківської карти: <strong>${cardNumber}</strong></p>
+					<a class="donate-link" href="${bankLink}">ПОСИЛАННЯ НА БАНКУ</a>
+				`;
+			} else {
+				donateBoxStatic.innerHTML = '';
+			}
+		}
+	</script>
 </body>
 </html>
