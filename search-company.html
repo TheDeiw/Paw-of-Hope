@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+	<link rel="stylesheet" href="./css/styles.css" />
+	<link rel="stylesheet" href="./css/search-company.css" />
+	<link rel="stylesheet" href="./css/adaptive_styles.css" />
+	<title>Paw Of Hope</title>
+</head>
+
+<body>
+	<header class="header" id="header"></header>
+
+		<main class="search__wide_container">
+			<div class="search_results">
+                <div class="search_results__header">
+                    <h2>Ми співпрацюємо з 27 діючими організаціями</h2>
+                    <h3>Достатньо ввести назву або обрати область для спрощення пошуку</h3>
+                    
+                </div>
+                
+                <div class="search_results__searchbar">
+                    <input
+                        type="text"
+                        placeholder="Шукайте тут"
+                        class="searchbar__input"
+                    /><div class="dropdown" id="dropdown-oblast">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Область
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Вінницька" onchange="toggleItem(this)">
+                            <span>Вінницька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Волинська" onchange="toggleItem(this)">
+                            <span>Волинська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Дніпропетровська" onchange="toggleItem(this)">
+                            <span>Дніпропетровська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Донецька" onchange="toggleItem(this)">
+                            <span>Донецька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Житомирська" onchange="toggleItem(this)">
+                            <span>Житомирська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Закарпатська" onchange="toggleItem(this)">
+                            <span>Закарпатська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Запорізька" onchange="toggleItem(this)">
+                            <span>Запорізька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Івано-Франківська" onchange="toggleItem(this)">
+                            <span>Івано-Франківська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Київська" onchange="toggleItem(this)">
+                            <span>Київська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Кіровоградська" onchange="toggleItem(this)">
+                            <span>Кіровоградська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Луганська" onchange="toggleItem(this)">
+                            <span>Луганська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Львівська" onchange="toggleItem(this)">
+                            <span>Львівська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Миколаївська" onchange="toggleItem(this)">
+                            <span>Миколаївська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Одеська" onchange="toggleItem(this)">
+                            <span>Одеська</span>
+                        </label>
+                    </div>
+                </div>
+                    <span class="searchbar__icon">
+                        <img src="./assets/img/icons8-search.svg" alt="Пошук" />
+                    </span>
+                </div>
+                
+                
+                <div class="search_results__cards">
+                    <div class="company-card">
+                        <img class="company-card__image" src="./assets/img/shelter-img.png" alt="company" />
+                        <div class="company-card__info">
+                            <h3 class="company-card__name">Ursa</h3>
+                            <span class="company-card__desc">URSA – громадська організація, яка з 2018 року займається захистом прав тварин в Україні. </span>
+                        </div>
+                    </div>
+                    <div class="company-card">
+                        <img class="company-card__image" src="./assets/img/shelter-img.png" alt="company" />
+                        <div class="company-card__info">
+                            <h3 class="company-card__name">Ursa</h3>
+                            <span class="company-card__desc">URSA 2 – громадська організація, яка з 2019 року займається захистом прав тварин в Україні. </span>
+                        </div>
+                    </div>
+                    <div class="company-card">
+                        <img class="company-card__image" src="./assets/img/shelter-img.png" alt="company" />
+                        <div class="company-card__info">
+                            <h3 class="company-card__name">Ursa</h3>
+                            <span class="company-card__desc">URSA 3 – громадська організація, яка з 2020 року займається захистом прав тварин в Україні. </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Додати інші карточки нижче -->
+            </div>
+
+		</main>
+	
+
+	<footer class="footer">
+		<nav class="footer__nav">
+			<div class="footer__nav-lists">
+				<h5 class="footer__nav__lists-heading">Navigation</h5>
+
+				<div class="footer__nav__lists__container">
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Допомогти</a></li>
+						<li class="footer__nav__item"><a href="#">Блог</a></li>
+					</ul>
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Новини</a></li>
+						<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="footer__nav__documents">
+				<li class="footer__nav__document"><a href="#">Copyright</a></li>
+				<li class="footer__nav__document"><a href="#">Privacy</a></li>
+				<li class="footer__nav__document">
+					<a href="#">All right reserved</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="footer__links">
+			<div class="footer__follow-us">
+				<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+
+				<menu class="follow-us__menu">
+					<button class="follow-us__btn">
+						<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+					</button>
+				</menu>
+			</div>
+
+			<div class="footer__contacts">
+				<h5 class="contacts__heading">Контакти</h5>
+
+				<p class="footer__contact">
+					Пані Олена:
+					<br />
+					+380 (67) 843 2730
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/searchPet.js"></script>
+    <script src="./js/registration_logic.js"></script>
+</body>
+
+</html>
