@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/registration_volunteer.css"/>
+    <link rel="stylesheet" href="./css/registration_institution.css"/>
     <title>Registration</title>
 </head>
 <body>
@@ -12,20 +12,15 @@
             <img class="logo_img" src="assets/img/logo.svg" alt="">
         </div>
         <div class="main__form">
-            <h1>Зареєструйтесь через</h1>
-            <div class="type_registration">
-                <button class="type_registration__button">
-                    <img class="registration__img" src="assets/img/facebook_reg.svg" alt=""/>
-                </button>
-                <button class="type_registration__button">
-                    <img class="registration__img" src="assets/img/google_reg.svg" alt=""/>
-                </button>
-            </div>
-            <h1>або заповніть поля нище</h1>
+            <h1>Реєстрація закладу</h1>
             <form class="form">
                 <div class="form__field">
                     <label for="fist_name">Ім'я та прізвище<span style="color: red;">*</span></label>
                     <input required id="fist_name" type="text" placeholder="Введіть ім'я"/>
+                </div>
+                <div class="form__field">
+                    <label for="institution_name">Назва закладу<span style="color: red;">*</span></label>
+                    <input required id="institution_name" type="text" placeholder="Введіть ім'я"/>
                 </div>
                 <div class="form__field">
                     <label for="email">Email<span style="color: red;">*</span></label>
@@ -74,15 +69,13 @@
                 </div>
                 <div class="form__field">
                     <label for="passvord_submit">Підтвердіть пароль<span style="color: red;">*</span></label>
-                    <input required class="password_input" id="passvord_submit" type="password" placeholder="Підтвердіть пароль"/>
+                    <input class="password_input" id="passvord_submit" type="password" placeholder="Підтвердіть пароль"/>
                     <button type="button" class="toggle_password" onclick="togglePassword(event)">
                         <img class="button_eye" src="assets/img/eye-off.svg" alt="Показати пароль" />
                     </button>
                 </div>
-                <button class="registration_button, green-btn">Зареєструватися</button>
+                <button type="submit" class="registration_button, green-btn">Зареєструватися</button>
             </form>
-            <a class="registration_link" href="">Вже маєте акаунт?</a>
-            <a class="registration_link" href="">Зареєструватися як акаунт</a>
         </div>
     </div>
     <script src="js/registration_volunteer.js"></script>

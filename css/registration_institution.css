@@ -32,7 +32,7 @@ html{
 .main__side_logo {
     margin: 2vw;
     width: 25vw;
-    height: 145vh;
+    height: 120vh;
     border-radius: 20px;
     background: #FF9748;
     display: flex;
@@ -54,6 +54,21 @@ html{
     align-items: center;
     gap: 10px;
 }
+
+#district {
+    overflow-y: auto;
+}
+
+#district option {
+    height: 5vh; /* висота кожного пункту */
+}
+
+/* Додатково можна обмежити макс. висоту при відкритті */
+#district:focus {
+    max-height: 10vh; /* наприклад: 5 елементів * 40px */
+}
+
+
 
 .type_registration{
     display: flex;
@@ -126,7 +141,6 @@ button {
 
 .green-btn {
     margin-top: 2vh;
-    margin-bottom: 2vh;
     width: 25vw;
     border-radius: 0.5vw;
     padding: 2vh;
