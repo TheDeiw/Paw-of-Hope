@@ -7,62 +7,44 @@
   <title>Кабінет Закладу</title>
   <link rel="stylesheet" href="css/cabinet-shelter.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/cabinet-chat.css">
 </head>
 <body>
 	<header class="header" id="header"></header>
 
 	<main class="main-content">
-		
-		<section class="chat-list">
+		<section class="animal-list">
 		  <div class="controls">
-			 <button onclick="window.location.href='cabinet-shelter.html'" class="btn">Список тварин</button>
-			 <button class="btn active">Подати заявку</button>
+			 <button onclick="window.location.href='cabinet-volunteer.html'" class="btn active">Вподобані</button>
+			 <button onclick="submitAnApplication()" class="btn">Подати заявку</button>
 		  </div>
-
-		  <div class="chat-container">
-			<div class="chat-sidebar">
-				<h3>Заявки</h3>
-				<div class="chat-item">
-					<img src="assets/img/zaklad_logo.png" alt="Аватар">
-					<span>Пані Олена</span>
+		  <button onclick="addAnimal()" class="add-btn">+ Додати</button>
+		  <div class="animals">
+			 
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Ізя</h3>
+				  <p>дівчинка, 1 рік</p>
+				  <p>Короткий опис тваринки</p>
 				</div>
-				<div class="chat-item">
-					<img src="assets/img/zaklad_logo.png" alt="Аватар">
-					<span>Пан Ігор</span>
+			 </div>
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Бім</h3>
+				  <p>хлопчик, 3 роки</p>
+				  <p>Веселий та дружелюбний</p>
 				</div>
-				<div class="chat-item">
-					<img src="assets/img/zaklad_logo.png" alt="Аватар">
-					<span>Пані Марія</span>
+			 </div>
+			 <div class="animal">
+				<img src="assets/img/Izia.png" alt="Фото тваринки">
+				<div class="info">
+				  <h3>Луна</h3>
+				  <p>дівчинка, 2 роки</p>
+				  <p>Спокійна та лагідна</p>
 				</div>
-			</div>
-	
-			<div class="chat-main">
-				<div class="chat-messages">
-					<div class="message sent">
-						<img src="assets/img/zaklad_logo.png" alt="Аватар">
-						<p>Привіт, як спраaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaви?</p>
-					</div>
-					<div class="message received">
-						<p>Привіт! Добре, а в тебе?</p>
-						<img src="assets/img/zaklad_logo.png" alt="Аватар">
-					</div>
-					<div class="message received">
-						<p>Може, зустрінемось завтраaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa?</p>
-						<img src="assets/img/zaklad_logo.png" alt="Аватар">
-					</div>
-				</div>
-	
-				<div class="chat-input">
-					<input type="text" placeholder="Напишіть повідомлення...">
-					<label for="file-upload">
-						<img src="assets/img/icons8-clip-64.png" alt="Прикріпити файл" class="attached-icon">
-					</label>
-					<input type="file" id="file-upload">
-					<button>Надіслати</button>
-				</div>
-			</div>
-		</div>
+			 </div>
+		  </div>
 		</section>
   
 		<aside class="shelter-info-cab">
@@ -102,8 +84,9 @@
 			 </div>
 		  </div>
 		  <div class="shelter-info-footer">
-			<button class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
-		  </div>
+			</div>
+			<div class="shelter-info-footer"></div>
+				
 		</aside>
   </main>
 
@@ -111,7 +94,6 @@
 	<nav class="footer__nav">
 		<div class="footer__nav-lists">
 			<h5 class="footer__nav__lists-heading">Navigation</h5>
-
 			<div class="footer__nav__lists__container">
 				<ul class="footer__nav__list">
 					<li class="footer__nav__item"><a href="#">Допомогти</a></li>
