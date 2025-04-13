@@ -1,0 +1,241 @@
+.create__wide_container {
+    width: 100%;
+    padding: 0;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+}
+
+.pet_form {
+    display: flex;
+    width: 90%;
+    margin: 1%;
+    max-width: 1200px;
+    min-height: calc(100vh - 80px);
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: var(--greish-green);
+    border-radius: 15px;
+}
+
+
+.dropdown {
+    position: relative;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.down-btn__image {
+    transform: rotate(90deg);
+    width: 15px;
+    height: 15px;
+    user-select: none;
+}
+
+.dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-list {
+    max-height: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 16px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.dropdown.open .dropdown-list {
+    max-height: 200px;
+    padding: 8px 16px 16px;
+    overflow-y: auto;
+}
+
+
+.dropdown-list label {
+    display: flex;
+    padding: 6px 0;
+    flex-wrap: wrap;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkbox-label {
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+}
+
+.checkbox-label span {
+    display: inline-block;
+    max-width: 80%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+
+}
+
+.dropdown-list input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border: 2px solid #2d5c2d;
+    border-radius: 50%;
+    /* коло */
+    cursor: pointer;
+    position: relative;
+    transition: border 0.2s ease-in-out;
+}
+
+.dropdown-list input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #2d5c2d;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.range-inputs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.range-inputs input {
+    width: 60px;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.new_option_input {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    background: transparent;
+    outline: none;
+    padding: 4px 0;
+    font-size: 14px;
+    font-family: 'Nunito';
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.new_option_input:focus {
+    border-bottom: 1px solid #000;
+}
+
+/* ============= PHOTO =============== */
+.full_width__wrapper {
+    width: 100%;
+}
+
+.photo-upload-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    color: #000;
+}
+
+.photo-upload-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-upload-input {
+    display: none;
+}
+
+.photo-filename-display {
+    flex: 1;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.photo-upload-btn {
+    background-color: #c6ed73;
+    padding: 12px 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.photo-upload-btn:hover {
+    background-color: #b3db5e;
+}
+
+/* ================ TEXT =============== */
+.form-label {
+    font-size: 14px;
+    margin: 20px 0 8px;
+    display: block;
+    color: #000;
+}
+
+.form-input {
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    resize: vertical;
+    /* textarea можна тягнути вниз */
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(198, 237, 115, 0.5);
+}
+
+.submit_btn {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    height: 56px;
+    padding: 16px 46px 16px 47px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #345830;
+    color: white;
+}
