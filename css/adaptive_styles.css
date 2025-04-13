@@ -1,0 +1,250 @@
+@media (max-width: 767.98px) {
+	.header__container {
+		flex-wrap: nowrap;
+		width: 100%;
+		justify-content: space-between;
+		box-sizing: border-box;
+		height: auto;
+	}
+
+	.header__nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #c6ed73;
+		padding: 5vw;
+		z-index: 999;
+	}
+
+	.menu-open .header__nav {
+		display: flex;
+		flex-direction: column;
+		box-sizing: border-box;
+
+	}
+
+	.header__nav ul {
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		gap: 5px;
+	}
+
+	.header__nav li {
+		margin: 2vw 0;
+	}
+
+	.burger-icon {
+		display: block;
+		margin-right: 3vw;
+	}
+
+	.header__auth-menu {
+		display: flex;
+		gap: 1vw;
+	}
+
+	.auth-menu__btn {
+		padding: 1vw 3vw;
+		font-size: 2.5vw;
+	}
+
+	main {
+		flex-direction: column;
+		padding: 2vw;
+		align-items: center;
+	}
+
+	.main__heading {
+		text-align: center;
+		font-size: 6vw;
+	}
+
+	.main__textbox {
+		width: 90vw;
+		margin: 0 auto;
+		height: auto;
+		padding: 3vw;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.main__btn {
+		margin-top: 25px;
+		font-size: 3vw;
+		padding: 1vw 3vw;
+		height: auto;
+	}
+
+	.main__image {
+		width: 90vw;
+		height: auto;
+	}
+
+	.about-us {
+		flex-direction: column;
+		align-items: center;
+		gap: 5vw;
+	}
+
+	.about-us__block {
+		width: 80vw;
+		height: auto;
+		gap: 3vw;
+	}
+
+	.about-us__value {
+		font-size: 6vw;
+	}
+
+	.about-us__text {
+		font-size: 4vw;
+		width: 80vw;
+	}
+	.carousel__btn{
+		display: none;
+	}
+	.shelters__heading,
+	.news__heading {
+		font-size: 10vw;
+		text-align: center;
+		width: 100%;
+		height: auto;
+	}
+
+	.shelters__carousel {
+		flex-direction: column;
+		gap: 3vw;
+		box-sizing: border-box;
+		padding: 0%;
+	}
+	.shelter-image {
+		width: 90vw;
+		height: auto;
+		display: none;
+	}
+	.carousel__content{
+		height: auto;
+	}
+	.shelter-info {
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		padding: 4vw;
+		width: 90vw;
+	}
+
+	.shelter-info__textbox {
+		width: 90vw;
+		align-items: center;
+		text-align: center;
+	}
+
+	.shelter-info__heading {
+		font-size: 4.5vw;
+		height: auto;
+	}
+
+	.shelter-info__text,
+	.shelter-info__properties {
+		font-size: 3.5vw;
+		height: auto;
+	}
+
+	.shelter-info__menu {
+		justify-content: center;
+	}
+
+	.shelter-info__btn {
+		font-size: 3vw;
+		padding: 2vw 4vw;
+	}
+
+	.news__container {
+		flex-direction: column;
+		align-items: center;
+		gap: 5vw;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.news__news-block {
+		width: 90vw;
+		height: auto;
+	}
+
+	.news-block__heading {
+		font-size: 4vw;
+	}
+
+	.news-block__image {
+		width: 100%;
+		height: auto;
+	}
+
+	.news-block__date,
+	.news-block__text,
+	.learn-more__text {
+		font-size: 3vw;
+	}
+
+	.help-animals__container {
+		width: 90vw;
+		gap: 4vw;
+		padding: 5vw 3vw;
+		box-sizing: border-box;
+	}
+
+	.help-animals__inner-heading {
+		font-size: 5vw;
+		height: auto;
+	}
+
+	.help-animals__image {
+		width: 40vw;
+		height: auto;
+	}
+
+	.help-animals__text {
+		font-size: 3.5vw;
+		width: 90vw;
+	}
+
+	.help-animals__price-input {
+		font-size: 3.5vw;
+		width: 80vw;
+		padding: 3vw;
+	}
+
+	.help-animals__send-btn {
+		font-size: 3vw;
+		width: 50vw;
+		height: auto;
+		padding: 3vw;
+	}
+
+	.footer {
+		flex-direction: column;
+		align-items: center;
+		padding: 5vw;
+		gap: 4vw;
+	}
+
+	.footer__nav,
+	.footer__links {
+		flex-direction: column;
+		align-items: center;
+		gap: 4vw;
+		width: 100%;
+	}
+
+	.footer__nav__lists__container {
+		flex-direction: column;
+		gap: 2vw;
+	}
+}
