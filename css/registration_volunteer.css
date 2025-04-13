@@ -79,6 +79,7 @@ html{
 }
 
 .form__field{
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1vh;
@@ -103,13 +104,25 @@ select, ::placeholder {
     color: #345830;
 }
 
+.toggle_password {
+    position: absolute;
+    margin: 9% 0% 0% 90%;
+    height: 30%;
+    cursor: pointer;
+}
+
+.button_eye{
+    height: 100%;
+}
+
 button {
+    position: relative;
     padding: 0;
     border: none;
     background: none;
     text-decoration: none;
     font: inherit;
-  }
+}
 
 .green-btn {
     margin: 4vh;

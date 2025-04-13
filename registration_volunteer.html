@@ -42,12 +42,18 @@
                     </select>
                 </div>
                 <div class="form__field">
-                    <label for="passvord">Пароль<span style="color: red;">*</span></label>
-                    <input id="passvord" type="password" placeholder="********"/>
+                    <label for="password">Пароль<span style="color: red;">*</span></label>
+                    <input class="password_input" id="password" type="password" placeholder="Введіть пароль"/>
+                    <button type="button" class="toggle_password" onclick="togglePassword(event)">
+                        <img class="button_eye" src="assets/img/eye-off.svg" alt="Показати пароль" />
+                    </button>
                 </div>
                 <div class="form__field">
                     <label for="passvord_submit">Підтвердіть пароль<span style="color: red;">*</span></label>
-                    <input id="passvord_submit" type="password" placeholder="********"/>
+                    <input class="password_input" id="passvord_submit" type="password" placeholder="Підтвердіть пароль"/>
+                    <button type="button" class="toggle_password" onclick="togglePassword(event)">
+                        <img class="button_eye" src="assets/img/eye-off.svg" alt="Показати пароль" />
+                    </button>
                 </div>
             </form>
             <button class="registration_button, green-btn">Зареєструватися</button>
@@ -55,5 +61,6 @@
             <a class="registration_link" href="">Зареєструватися як акаунт</a>
         </div>
     </div>
+    <script src="js/registration_volunteer.js"></script>
 </body>
 </html>
