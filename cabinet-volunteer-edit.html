@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <title>Кабінет Закладу</title>
+  <link rel="stylesheet" href="css/cabinet-volunteer.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
+      </div>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#">Новини</a></li>
+          <li class="nav__item"><a href="#">Пошук організації</a></li>
+          <li class="nav__item"><a href="#">Знайти тваринку</a></li>
+          <li class="nav__item"><a href="#">Створити оголошення</a></li>
+          <li class="nav__item"><a href="#">Про нас</a></li>
+        </ul>
+      </nav>
+      <menu class="header__auth-menu">
+        <button class="auth-menu__btn green-btn login-btn">Увійти</button>
+        <button class="auth-menu__btn green-btn register-btn">Зареєструватися</button>
+      </menu>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="for-edit" id="for-edit"></div>
+    <section class="animal-list" id="animal-list">
+      <div class="controls">
+        <button class="btn active">Вподобані</button>
+        <button class="btn">Подані заявки</button>
+      </div>
+      <div class="shelters-con">
+        <div class="shelter">
+          <button class="remove-btn"><strong>×</strong></button>
+          <div class="shelter-logo">
+            <img src="assets/img/zaklad_logo.png" alt="Аватар закладу">
+          </div>
+          <div class="info">
+            <h3>Назва закладу</h3>
+          </div>
+        </div>
+        <div class="shelter">
+          <button class="remove-btn"><strong>×</strong></button>
+          <div class="shelter-logo">
+            <img src="assets/img/zaklad_logo.png" alt="Аватар закладу">
+          </div>
+          <div class="info">
+            <h3>Назва закладу</h3>
+          </div>
+        </div>
+      </div>
+      <div class="animals">
+        <div class="animal">
+          <button class="remove-btn"><strong>×</strong></button>
+          <img src="assets/img/Izia.png" alt="Фото тваринки">
+          <div class="info">
+            <h3>Ізя</h3>
+            <p>дівчинка, 1 рік</p>
+            <p>Короткий опис тваринки</p>
+          </div>
+        </div>
+        <div class="animal">
+          <button class="remove-btn"><strong>×</strong></button>
+          <img src="assets/img/Izia.png" alt="Фото тваринки">
+          <div class="info">
+            <h3>Ім'я</h3>
+            <p>СТАТЬ, ВІК</p>
+            <p>Короткий опис тваринки</p>
+          </div>
+        </div>
+        <div class="animal">
+          <button class="remove-btn"><strong>×</strong></button>
+          <img src="assets/img/Izia.png" alt="Фото тваринки">
+          <div class="info">
+            <h3>Ім'я</h3>
+            <p>СТАТЬ, ВІК</p>
+            <p>Короткий опис тваринки</p>
+          </div>
+        </div>
+        <div class="animal">
+          <button class="remove-btn"><strong>×</strong></button>
+          <img src="assets/img/Izia.png" alt="Фото тваринки">
+          <div class="info">
+            <h3>Ім'я</h3>
+            <p>СТАТЬ, ВІК</p>
+            <p>Короткий опис тваринки</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <aside class="shelter-info-cab" id="shelter-info-cab">
+      <div class="shelter-inform">
+        <div class="shelter-head">
+          <div class="shelter-logo">
+            <img src="assets/img/zaklad_logo.png" alt="Аватар закладу" id="profile-image">
+            <button class="change-image-btn" id="change-image-btn" style="display: none;">Змінити зображення</button>
+          </div>
+          <div class="shelter-name">
+            <h2>Ім'я Прізвище</h2>
+            <span class="italic">#волонтер</span>
+            <button class="edit-btn" id="edit-profile-btn">Редагувати профіль</button>
+          </div>
+        </div>
+        <div class="shelter-card">
+          <div class="shelter-details">
+            <div class="description" id="description-static">
+              <strong>Біографія:</strong>
+              <p>Основна загальна інформація для ознайомлення чим займається заклад, планую туту.</p>
+            </div>
+            <div class="description edit-field" id="description-edit" style="display: none;">
+              <strong>Біографія:</strong>
+              <textarea rows="3">Основна загальна інформація для ознайомлення чим займається заклад, планую туту.</textarea>
+            </div>
+            <div class="contact-info" id="contact-info-static">
+              <div class="phone">
+                <img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+                <p>+380909090909</p>
+              </div>
+              <div class="email">
+                <img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+                <p>myname.user9@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-info edit-field" id="contact-info-edit" style="display: none;">
+              <div class="phone-section">
+                <div class="phone">
+                  <img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+                  <input type="text" value="+380909090909" />
+                  <button class="remove-contact-btn">×</button>
+                </div>
+                <button class="add-contact-btn add-phone-btn">+</button>
+              </div>
+              <div class="email-section">
+                <div class="email">
+                  <img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+                  <input type="email" value="myname.user9@gmail.com" />
+                  <button class="remove-contact-btn">×</button>
+                </div>
+                <button class="add-contact-btn add-email-btn">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="edit-actions-container" id="edit-actions" style="display: none;">
+            <div class="edit-actions">
+              <button class="cancel-btn">Скасувати</button>
+              <button class="save-btn">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shelter-info-footer">
+        <button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-settings-96 1.png" alt="налаштування">Налаштування</button>
+        <button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-emergency-exit-96.png" alt="Вийти">Вийти з акаунту</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <nav class="footer__nav">
+      <div class="footer__nav-lists">
+        <h5 class="footer__nav__lists-heading">Navigation</h5>
+        <div class="footer__nav__lists__container">
+          <ul class="footer__nav__list">
+            <li class="footer__nav__item"><a href="#">Допомогти</a></li>
+            <li class="footer__nav__item"><a href="#">Блог</a></li>
+          </ul>
+          <ul class="footer__nav__list">
+            <li class="footer__nav__item"><a href="#">Новини</a></li>
+            <li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footer__nav__documents">
+        <li class="footer__nav__document"><a href="#">Copyright</a></li>
+        <li class="footer__nav__document"><a href="#">Privacy</a></li>
+        <li class="footer__nav__document"><a href="#">All right reserved</a></li>
+      </ul>
+    </nav>
+    <div class="footer__links">
+      <div class="footer__follow-us">
+        <h5 class="follow-us__heading">Слідкуйте за нами</h5>
+        <menu class="follow-us__menu">
+          <button class="follow-us__btn">
+            <img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+          </button>
+          <button class="follow-us__btn">
+            <img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+          </button>
+          <button class="follow-us__btn">
+            <img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+          </button>
+          <button class="follow-us__btn">
+            <img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+          </button>
+        </menu>
+      </div>
+      <div class="footer__contacts">
+        <h5 class="contacts__heading">Контакти</h5>
+        <p class="footer__contact">
+          Пані Олена:<br />
+          +380 (67) 843 2730
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const editProfileBtn = document.getElementById('edit-profile-btn');
+    const forEditOverlay = document.getElementById('for-edit');
+    const shelterInfoCab = document.getElementById('shelter-info-cab');
+    const animalList = document.getElementById('animal-list');
+    const editActions = document.getElementById('edit-actions');
+    const descriptionStatic = document.getElementById('description-static');
+    const descriptionEdit = document.getElementById('description-edit');
+    const contactInfoStatic = document.getElementById('contact-info-static');
+    const contactInfoEdit = document.getElementById('contact-info-edit');
+    const changeImageBtn = document.getElementById('change-image-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const saveBtn = document.querySelector('.save-btn');
+    const addPhoneBtn = document.querySelector('.add-phone-btn');
+    const addEmailBtn = document.querySelector('.add-email-btn');
+
+    let isEditMode = false;
+    let phones = ['+380909090909'];
+    let emails = ['myname.user9@gmail.com'];
+
+    editProfileBtn.addEventListener('click', () => {
+      isEditMode = !isEditMode;
+      toggleEditMode();
+    });
+
+    cancelBtn.addEventListener('click', () => {
+      isEditMode = false;
+      phones = contactInfoStatic.querySelectorAll('.phone p').length ? Array.from(contactInfoStatic.querySelectorAll('.phone p')).map(p => p.textContent) : ['+380909090909'];
+      emails = contactInfoStatic.querySelectorAll('.email p').length ? Array.from(contactInfoStatic.querySelectorAll('.email p')).map(p => p.textContent) : ['myname.user9@gmail.com'];
+      toggleEditMode();
+    });
+
+    saveBtn.addEventListener('click', () => {
+      isEditMode = false;
+      saveChanges();
+      toggleEditMode();
+    });
+
+    addPhoneBtn.addEventListener('click', () => {
+      phones.push('');
+      renderContacts();
+    });
+
+    addEmailBtn.addEventListener('click', () => {
+      emails.push('');
+      renderContacts();
+    });
+
+    changeImageBtn.addEventListener('click', () => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            document.getElementById('profile-image').src = event.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      };
+      input.click();
+    });
+
+    function toggleEditMode() {
+      if (isEditMode) {
+        forEditOverlay.style.display = 'block';
+        shelterInfoCab.style.flex = '2';
+        animalList.style.flex = '1';
+        editActions.style.display = 'block';
+        editProfileBtn.style.display = 'none';
+        descriptionStatic.style.display = 'none';
+        descriptionEdit.style.display = 'block';
+        contactInfoStatic.style.display = 'none';
+        contactInfoEdit.style.display = 'block';
+        changeImageBtn.style.display = 'block';
+        renderContacts();
+      } else {
+        forEditOverlay.style.display = 'none';
+        shelterInfoCab.style.flex = '1';
+        animalList.style.flex = '2';
+        editActions.style.display = 'none';
+        editProfileBtn.style.display = 'block';
+        descriptionStatic.style.display = 'block';
+        descriptionEdit.style.display = 'none';
+        contactInfoStatic.style.display = 'block';
+        contactInfoEdit.style.display = 'none';
+        changeImageBtn.style.display = 'none';
+      }
+    }
+
+    function renderContacts() {
+      const phoneSection = contactInfoEdit.querySelector('.phone-section');
+      const emailSection = contactInfoEdit.querySelector('.email-section');
+
+      // Render phones
+      phoneSection.innerHTML = '';
+      phones.forEach((phone, index) => {
+        const phoneDiv = document.createElement('div');
+        phoneDiv.classList.add('phone');
+        phoneDiv.innerHTML = `
+          <img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+          <input type="text" value="${phone}" />
+          <button class="remove-contact-btn">×</button>
+        `;
+        phoneDiv.querySelector('input').addEventListener('input', (e) => {
+          phones[index] = e.target.value;
+        });
+        phoneDiv.querySelector('.remove-contact-btn').addEventListener('click', () => {
+          phones.splice(index, 1);
+          renderContacts();
+        });
+        phoneSection.appendChild(phoneDiv);
+      });
+      phoneSection.appendChild(addPhoneBtn);
+
+      // Render emails
+      emailSection.innerHTML = '';
+      emails.forEach((email, index) => {
+        const emailDiv = document.createElement('div');
+        emailDiv.classList.add('email');
+        emailDiv.innerHTML = `
+          <img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+          <input type="email" value="${email}" />
+          <button class="remove-contact-btn">×</button>
+        `;
+        emailDiv.querySelector('input').addEventListener('input', (e) => {
+          emails[index] = e.target.value;
+        });
+        emailDiv.querySelector('.remove-contact-btn').addEventListener('click', () => {
+          emails.splice(index, 1);
+          renderContacts();
+        });
+        emailSection.appendChild(emailDiv);
+      });
+      emailSection.appendChild(addEmailBtn);
+    }
+
+    function saveChanges() {
+      // Save description
+      const newDescription = descriptionEdit.querySelector('textarea').value;
+      descriptionStatic.querySelector('p').textContent = newDescription;
+
+      // Save phones and emails
+      contactInfoStatic.innerHTML = '';
+      phones = phones.filter(phone => phone.trim() !== '');
+      emails = emails.filter(email => email.trim() !== '');
+      phones.forEach(phone => {
+        const phoneDiv = document.createElement('div');
+        phoneDiv.classList.add('phone');
+        phoneDiv.innerHTML = `
+          <img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+          <p>${phone}</p>
+        `;
+        contactInfoStatic.appendChild(phoneDiv);
+      });
+      emails.forEach(email => {
+        const emailDiv = document.createElement('div');
+        emailDiv.classList.add('email');
+        emailDiv.innerHTML = `
+          <img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+          <p>${email}</p>
+        `;
+        contactInfoStatic.appendChild(emailDiv);
+      });
+    }
+  </script>
+</body>
+</html>
