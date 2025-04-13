@@ -371,20 +371,25 @@ body {
 	flex-direction: row;
 	margin-bottom: 10px;
   }
-  
-  .shelter-info-footer {
-	margin-top: auto;
-	width: 100%;
-  }
+
   
   .shelter-inform {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
   }
+
+ .shelter-info-footer {
+	display: flex;
+	flex-direction: column;
+	  margin-top: auto;
+	  width: 100%; 
+	gap:0px;
+  }
   
-  .add-btn {
-	display: block;
+
+.add-btn {
+	display: none;
 	padding: 10px 20px;
 	margin: 0px 0px 20px 20px;
 	background: #345830;

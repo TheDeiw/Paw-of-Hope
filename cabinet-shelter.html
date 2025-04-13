@@ -35,7 +35,7 @@
 		<section class="animal-list" id="animal-list">
 		  <div class="controls">
 			 <button class="btn active">Список тварин</button>
-			 <button class="btn">Подати заявку</button>
+			 <button onclick="submitAnApplication()" class="btn">Подати заявку</button>
 		  </div>
 		  <button class="add-btn">+ Додати</button>
 		  <div class="animals">
@@ -166,9 +166,36 @@
 					</div>
 				</div>
 			</div>
-			<div class="shelter-info-footer">
-				<button class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
+
+			<div class="shelter-card">
+			 <div class="shelter-details">
+				<p class="description">Основна загальна інформація для ознайомлення чим займається заклад.</p>
+				<div class="address">
+					<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
+					<p>вул. Така-то, м. Сяке-то, обл. Така, Україна</p>
+				</div>
+				<div class="phone">
+					<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
+					<p>+380909090909</p>
+				</div>
+				<div class="email">
+					<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
+					<p>paw.hope@gmail.com</p>
+				</div>
+				<div class="donate-box">
+				  <div class="donate-head">
+					<img src="assets/img/money-icon.svg" alt="Гроші для підримки">
+					<p><strong>Для підтримки</strong></p>
+				  </div>
+				  <p>Номер банківської карти: <strong>1111 1111 1111 1111</strong></p>
+				  <a class="donate-link" href="#">ПОСИЛАННЯ НА БАНКУ</a>
+				</div>
+			 </div>
+		  </div>
+		  <div class="shelter-info-footer">
 			</div>
+			<div class="shelter-info-footer"></div>
+				
 		</aside>
 	</main>
 

@@ -1,4 +1,5 @@
 var isRegistered = false;
+var isVisitor = true;
 
 document.addEventListener("DOMContentLoaded", function () {
     changeHeader();
@@ -7,9 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 function goToNextPage(href) {
-    if(isRegistered){
-        
-    }
     window.location.href = href;
 }
 
@@ -30,13 +28,13 @@ function changeHeader() {
 							<a href="#">Пошук організації</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Знайти тваринку</a>
+							<a href="searchPet.html">Знайти тваринку</a>
 						</li>
 						<li class="nav__item">
 							<a href="#">Створити оголошення</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Про нас</a>
+							<a href="about-us.html">Про нас</a>
 						</li>
 					</ul>
 				</nav>
@@ -52,6 +50,19 @@ function changeHeader() {
 				<span></span>
 			</div>
         `;
+		document.getElementsByClassName("add-btn")[0].style.display = "block";
+		if(isVisitor){
+			document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
+		<button onclick="favorite()" class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
+		`;
+		}
+		else{
+			document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
+			<button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-settings-96 1.png" alt="налаштування">Налаштування</button>
+				<button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-emergency-exit-96.png" alt="Вийти">Вийти з акаунту</button>
+				
+			`;
+		}
     }
     else{
         document.getElementById("header").innerHTML = `
@@ -69,20 +80,20 @@ function changeHeader() {
 							<a href="#">Пошук організації</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Знайти тваринку</a>
+							<a href="searchPet.html">Знайти тваринку</a>
 						</li>
 						<li class="nav__item">
 							<a href="#">Створити оголошення</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Про нас</a>
+							<a href="about-us.html">Про нас</a>
 						</li>
 					</ul>
 				</nav>
 	
 				<menu class="header__auth-menu">
 					<button class="auth-menu__btn green-btn login-btn">Увійти</button>
-					<button class="auth-menu__btn green-btn register-btn">
+					<button onclick="window.location.href='registration_institution.html'" class="auth-menu__btn green-btn register-btn">
 						Зареєструватися
 					</button>
 				</menu>
@@ -94,5 +105,27 @@ function changeHeader() {
 				<span></span>
 			</div>
         `;
+		document.getElementsByClassName("add-btn")[0].style.display = "none";
+		document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
+		<button onclick="favorite()" class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
+		`;
     }
+}
+
+function submitAnApplication(){
+	if(isRegistered){
+		goToNextPage("cabinet-chat.html");
+	}
+	else{
+		goToNextPage("registration_institution.html");
+	}
+}
+
+function favorite(){
+	if(isRegistered){
+		goToNextPage();
+	}
+	else{
+		goToNextPage("registration_institution.html");
+	}
 }
