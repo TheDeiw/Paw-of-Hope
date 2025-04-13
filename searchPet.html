@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+	<link rel="stylesheet" href="./css/styles.css" />
+	<link rel="stylesheet" href="./css/searchPet.css" />
+	<title>Paw Of Hope</title>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container">
+			<div class="header__logo">
+				<img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
+			</div>
+
+			<nav class="header__nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#">Новини</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Пошук організації</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Знайти тваринку</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Створити оголошення</a>
+					</li>
+					<li class="nav__item">
+						<a href="#">Про нас</a>
+					</li>
+				</ul>
+			</nav>
+
+			<menu class="header__auth-menu">
+				<button class="auth-menu__btn green-btn login-btn">Увійти</button>
+				<button class="auth-menu__btn green-btn register-btn">
+					Зареєструватися
+				</button>
+			</menu>
+		</div>
+	</header>
+
+		<main class="search__wide_container">
+			<div class="categories__nav">
+                <h2>
+                    Фільтри для пошуку
+                </h2>
+                
+                <div class="dropdown" id="dropdown-animal">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Вид тваринки
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Кіт" onchange="toggleItem(this)">
+                            <span>Кіт</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Собака" onchange="toggleItem(this)">
+                            <span>Собака</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Гризун" onchange="toggleItem(this)">
+                            <span>Гризун</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Рептилія" onchange="toggleItem(this)">
+                            <span>Рептилія</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Птахи" onchange="toggleItem(this)">
+                            <span>Птахи</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown-oblast">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Область
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Вінницька" onchange="toggleItem(this)">
+                            <span>Вінницька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Волинська" onchange="toggleItem(this)">
+                            <span>Волинська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Дніпропетровська" onchange="toggleItem(this)">
+                            <span>Дніпропетровська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Донецька" onchange="toggleItem(this)">
+                            <span>Донецька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Житомирська" onchange="toggleItem(this)">
+                            <span>Житомирська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Закарпатська" onchange="toggleItem(this)">
+                            <span>Закарпатська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Запорізька" onchange="toggleItem(this)">
+                            <span>Запорізька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Івано-Франківська" onchange="toggleItem(this)">
+                            <span>Івано-Франківська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Київська" onchange="toggleItem(this)">
+                            <span>Київська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Кіровоградська" onchange="toggleItem(this)">
+                            <span>Кіровоградська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Луганська" onchange="toggleItem(this)">
+                            <span>Луганська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Львівська" onchange="toggleItem(this)">
+                            <span>Львівська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Миколаївська" onchange="toggleItem(this)">
+                            <span>Миколаївська</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Одеська" onchange="toggleItem(this)">
+                            <span>Одеська</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown-gender">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Стать
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Дівчинка" onchange="toggleItem(this)">
+                            <span>Дівчинка</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Хлопчик" onchange="toggleItem(this)">
+                            <span>Хлопчик</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dropdown age-dropdown" id="dropdown-age">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Вік
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <div class="range-inputs">
+                            <input type="number" id="age-min" value="0" min="0" max="20" oninput="syncSlider('min')"> –
+                            <input type="text" id="age-max" value="20+" oninput="syncSlider('max')">
+                            <button class="confirmAge__btn" onclick="confirmAge()">Ok</button>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" id="slider-min" min="0" max="20" value="0" oninput="syncInput('min')">
+                            <input type="range" id="slider-max" min="0" max="21" value="20" oninput="syncInput('max')">
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown-health">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Стан здоров'я
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Здорова" onchange="toggleItem(this)">
+                            <span>Здорова</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Старенька" onchange="toggleItem(this)">
+                            <span>Старенька</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Особливий стан" onchange="toggleItem(this)">
+                            <span>Особливий стан</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown-sterilized">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Чи стерилізований(-на)
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Так" onchange="toggleItem(this)">
+                            <span>Так</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="Ні" onchange="toggleItem(this)">
+                            <span>Ні</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown-shelter">
+                    <div class="dropdown-header" onclick="toggleDropdown(this)">
+                        Область
+                        <span class="dropdown-icon">
+                            <img src="./assets/img/right-arrow.png" alt="down arrow" class="down-btn__image" />
+                        </span>
+                    </div>
+                    <div class="dropdown-list">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="0" onchange="toggleItem(this)">
+                            <span>Гостомельський притулок для тварин</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="1" onchange="toggleItem(this)">
+                            <span>Cats on Mars</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="2" onchange="toggleItem(this)">
+                            <span>Центр допомоги бездомним тваринам «У добрі руки»</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="3" onchange="toggleItem(this)">
+                            <span>Притулок для бездомних тварин «Сіріус»</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="4" onchange="toggleItem(this)">
+                            <span>Притулок для тварин Gaia</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="5" onchange="toggleItem(this)">
+                            <span>Тимчасовий притулок для тварин «Виставковий центр»</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="6" onchange="toggleItem(this)">
+                            <span>Best Friends</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="7" onchange="toggleItem(this)">
+                            <span>«Відродження»</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="8" onchange="toggleItem(this)">
+                            <span>SOS</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+			<div class="search_results">
+                <div class="search_results__header">
+                    <h2>248 улюбленців шукають домівку</h2>
+                    <h3>Достатньо ввести ключові слова або обрати потрібні фільтри</h3>
+                    
+                </div>
+                <div class="search_results__searchbar">
+                    <input
+                        type="text"
+                        placeholder="Шукайте тут"
+                        class="searchbar__input"
+                    />
+                    <span class="searchbar__icon">
+                        <img src="./assets/img/icons8-search.svg" alt="Пошук" />
+                    </span>
+                </div>
+
+                <!-- Приклад карточки -->
+                
+                <div class="search_results__cards">
+                    <div class="pet-card">
+                        <img class="pet-card__image" src="./assets/img/image-79322-800.jpg" alt="Ізя" />
+                        <div class="pet-card__info">
+                            <h3 class="pet-card__name">Ізя</h3>
+                            <p class="pet-card__desc">дівчинка, 1 рік</p>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img class="pet-card__image" src="./assets/img/image-79322-800.jpg" alt="Ізя" />
+                        <div class="pet-card__info">
+                            <h3 class="pet-card__name">Зюзя</h3>
+                            <p class="pet-card__desc">хлопчик, 1 рік</p>
+                        </div>
+                    </div>
+                    <div class="pet-card">
+                        <img class="pet-card__image" src="./assets/img/image-79322-800.jpg" alt="Ізя" />
+                        <div class="pet-card__info">
+                            <h3 class="pet-card__name">Інокентій</h3>
+                            <p class="pet-card__desc">хлопчик, 10 років</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Додати інші карточки нижче -->
+            </div>
+
+		</main>
+	
+
+	<footer class="footer">
+		<nav class="footer__nav">
+			<div class="footer__nav-lists">
+				<h5 class="footer__nav__lists-heading">Navigation</h5>
+
+				<div class="footer__nav__lists__container">
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Допомогти</a></li>
+						<li class="footer__nav__item"><a href="#">Блог</a></li>
+					</ul>
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Новини</a></li>
+						<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<ul class="footer__nav__documents">
+				<li class="footer__nav__document"><a href="#">Copyright</a></li>
+				<li class="footer__nav__document"><a href="#">Privacy</a></li>
+				<li class="footer__nav__document">
+					<a href="#">All right reserved</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="footer__links">
+			<div class="footer__follow-us">
+				<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+
+				<menu class="follow-us__menu">
+					<button class="follow-us__btn">
+						<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+					</button>
+				</menu>
+			</div>
+
+			<div class="footer__contacts">
+				<h5 class="contacts__heading">Контакти</h5>
+
+				<p class="footer__contact">
+					Пані Олена:
+					<br />
+					+380 (67) 843 2730
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/searchPet.js"></script>
+</body>
+
+</html>
