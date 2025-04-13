@@ -9,26 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	<header class="header">
-		<div class="header__container">
-		  <div class="header__logo">
-			<img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
-		  </div>
-		  <nav class="header__nav">
-			<ul class="nav__list">
-			  <li class="nav__item"><a href="#">Новини</a></li>
-			  <li class="nav__item"><a href="#">Пошук організації</a></li>
-			  <li class="nav__item"><a href="#">Знайти тваринку</a></li>
-			  <li class="nav__item"><a href="#">Створити оголошення</a></li>
-			  <li class="nav__item"><a href="#">Про нас</a></li>
-			</ul>
-		  </nav>
-		  <menu class="header__auth-menu">
-			<button class="auth-menu__btn green-btn login-btn">Увійти</button>
-			<button class="auth-menu__btn green-btn register-btn">Зареєструватися</button>
-		  </menu>
-		</div>
-	  </header>
+	<header class="header" id="header"></header>
 	  
 	<main class="main-content">
 		<div class="for-edit" id="for-edit"></div>
@@ -167,30 +148,7 @@
 				</div>
 			</div>
 
-			<div class="shelter-card">
-			 <div class="shelter-details">
-				<p class="description">Основна загальна інформація для ознайомлення чим займається заклад.</p>
-				<div class="address">
-					<img src="assets/img/icons8-location-96.png" alt="Місцезнаходження">
-					<p>вул. Така-то, м. Сяке-то, обл. Така, Україна</p>
-				</div>
-				<div class="phone">
-					<img src="assets/img/icons8-phone-90.png" alt="Номер телефону">
-					<p>+380909090909</p>
-				</div>
-				<div class="email">
-					<img src="assets/img/icons8-mail-96.png" alt="Електронна пошта">
-					<p>paw.hope@gmail.com</p>
-				</div>
-				<div class="donate-box">
-				  <div class="donate-head">
-					<img src="assets/img/money-icon.svg" alt="Гроші для підримки">
-					<p><strong>Для підтримки</strong></p>
-				  </div>
-				  <p>Номер банківської карти: <strong>1111 1111 1111 1111</strong></p>
-				  <a class="donate-link" href="#">ПОСИЛАННЯ НА БАНКУ</a>
-				</div>
-			 </div>
+			
 		  </div>
 		  <div class="shelter-info-footer">
 			</div>
@@ -505,5 +463,6 @@
 			}
 		}
 	</script>
+	<script src="./js/registration_logic.js"></script>
 </body>
 </html>
