@@ -130,6 +130,7 @@ header {
   align-self: stretch;
   background: var(--light-green);
   position: fixed;
+  z-index: 1000;
 }
 
 .header__container {
