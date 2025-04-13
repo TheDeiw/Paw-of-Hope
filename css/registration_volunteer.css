@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #d9d9d9;
+    --light-green: #c6ed73;
+    --green: #345830;
+    --green-60: rgba(52, 88, 48, 0.6);
+    --green-40: rgba(52, 88, 48, 0.4);
+    --dark-green: #1e3f20;
+    --orange: #ff9748;
+    --orange-60: rgba(255, 151, 72, 0.6);
+    --orange-40: rgba(255, 151, 72, 0.4);
+    --light-orange: #ffa866;
+  }
+
+html{
+    font-family: Nunito;
+    color: #345830;
+}
+
+.main {
+    display: flex;
+    padding: 1vh 5vw;
+    justify-content:space-around;
+    gap: 3vw;
+    background: #FFF;
+    font-size:small;
+}
+
+.main__side_logo {
+    margin: 2vw;
+    width: 25vw;
+    height: 145vh;
+    border-radius: 20px;
+    background: #FF9748;
+    display: flex;
+    justify-content: center;
+}
+
+.logo_img{
+    margin-top: 5vh;
+    height: 30vh;
+}
+
+.main__form {
+    display: flex;
+    margin-top: 2vh;
+    margin-right: 10vw;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.type_registration{
+    display: flex;
+    height: 3vh;
+    padding: 10px 2vw;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vw;
+    flex-shrink: 0;
+    border-radius: 28px;
+    background: rgba(198, 237, 115, 0.50);
+}
+
+.type_registration__button{
+    all: unset;
+    cursor: pointer;
+    height: 150%;
+}
+
+.registration__img{
+    height: 100%;
+    width: 100%;
+}
+
+.form__field{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 25vw;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+  
+input, select{
+    padding: 2vh;
+    border-radius: 0.5vw;
+    border: 1px solid var(--Back-Lines-in-white, #D3E2E5);
+    background: rgba(198, 237, 115, 0.05);
+}
+
+select, ::placeholder {
+    font-family: Nunito;
+    color: #345830;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font: inherit;
+  }
+
+.green-btn {
+    margin: 4vh;
+    width: 25vw;
+    border-radius: 0.5vw;
+    padding: 2vh;
+    background-color: var(--green);
+    color: var(--white);
+}
+  
+.green-btn:hover {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    transition: 0.2s;
+}
+
+.registration_link{
+    text-decoration: none;
+    color: #345830;
+    margin: 1vh;
+}
