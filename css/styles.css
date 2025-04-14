@@ -348,6 +348,7 @@ main {
 .shelters__carousel {
   display: flex;
   padding: 10px;
+  margin-top: 50px;
   justify-content: space-between;
   align-items: center;
 }
