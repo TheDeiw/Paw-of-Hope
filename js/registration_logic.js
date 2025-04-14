@@ -93,23 +93,6 @@ function changeHeader() {
 			</div>
         `;
         }
-        // console.log(isVolunteer);
-        // if (isVolunteer) {
-        //     console.log("jkb");
-        //     if (document.getElementsByClassName("shelter-info-footer")[0]) {
-        //         document.getElementsByClassName("shelter-info-footer")[0].innerHTML = `
-		// 			<button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-settings-96 1.png" alt="налаштування">Налаштування</button>
-		// 			<button onclick="exit()" class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-emergency-exit-96.png" alt="Вийти">Вийти з акаунту</button>
-		// 		`;
-        //     }
-        // } else {
-        //     console.log("jkb8");
-        //     if (document.getElementsByClassName("shelter-info-footer")[0]) {
-        //         document.getElementsByClassName("shelter-info-footer")[0].innerHTML = `
-		// 		<button onclick="favorite()" class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
-		// 		`;
-        //     }
-        // }
 		if(asVolunteer && isInstitution){
 			console.log("vol");
 			if (document.getElementsByClassName("shelter-info-footer")[0]) {
@@ -139,40 +122,7 @@ function changeHeader() {
         if (document.getElementsByClassName("add-btn")[0]) {
             document.getElementsByClassName("add-btn")[0].style.display = "block";
         }
-        // if(Visitor){
-        // 	console.log("kjbj");
-        // 	if(document.getElementsByClassName("shelter-info-footer")[0]){
-        // 		document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
-        // 		<button onclick="favorite()" class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
-        // 		`;
-        // 	}
-        // 	if(document.getElementsByClassName("animal-list")[0]){
-        // 		document.getElementsByClassName("animal-list")[0].style.display = "none";
-        // 	}
-        // 	if(document.getElementsByClassName("edit-btn")[0].style.display){
-        // 		document.getElementsByClassName("edit-btn")[0].style.display = "none";
-        // 	}
-        // 	if(document.getElementsByClassName("shelter-info-footer")[0].style.display){
-        // 		document.getElementsByClassName("shelter-info-footer")[0].style.display = "none";
-        // 	}
-        // }
-        // else{
-        // 	if(document.getElementsByClassName("shelter-info-footer")[0]){
-        // 		document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
-        // 			<button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-settings-96 1.png" alt="налаштування">Налаштування</button>
-        // 			<button onclick="exit()" class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-emergency-exit-96.png" alt="Вийти">Вийти з акаунту</button>
-        // 		`;
-        // 	}
-        // 	if(document.getElementsByClassName("animal-list")[0]){
-        // 		document.getElementsByClassName("animal-list")[0].style.display = "block";
-        // 	}
-        // 	if(document.getElementsByClassName("edit-btn")[0].style.display){
-        // 		document.getElementsByClassName("edit-btn")[0].style.display = "block";
-        // 	}
-        // 	if(document.getElementsByClassName("shelter-info-footer")[0]){
-        // 		document.getElementsByClassName("shelter-info-footer")[0].style.display = "block";
-        // 	}
-        // }
+        
     } else {
         console.log(",,n,n");
         if (document.getElementById("header")) {
@@ -215,7 +165,7 @@ function changeHeader() {
 				<span></span>
 				<span></span>
 			</div>
-        `;
+        `; 
         }
         if (document.getElementsByClassName("add-btn")[0]) {
             document.getElementsByClassName("add-btn")[0].style.display = "none";
@@ -243,15 +193,6 @@ function changeHeader() {
         }
 	}
 }
-
-// function submitAnApplication() {
-//     const isRegistered = localStorage.getItem("isRegistered") === "true";
-//     if (isRegistered) {
-//         goToNextPage("cabinet-chat.html");
-//     } else {
-//         goToNextPage("registration_institution.html");
-//     }
-// }
 
 function favorite() {
 	if(checkIfFromCetPageChat()){
@@ -337,7 +278,6 @@ function goToAccount() {
 }
 
 function openChat() {
-	//const isVolunteer = localStorage.getItem("isVolunteer") === "true";
     localStorage.setItem("isVolunteer", "false");
 	localStorage.setItem("isInstitution", "true");
 	goToNextPage("cabinet-chat.html");
