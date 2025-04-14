@@ -251,6 +251,13 @@
     gap: 6px;
     width: calc(100vw - 120px);
     border-radius: 27px;
+    transition: transform 0.2s ease;
+}
+.company-card:hover {
+    transform: scale(1.02);
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	z-index: 1;
 }
 
 .company-card__image {

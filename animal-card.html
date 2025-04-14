@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <title>Pet Card</title>
+  <link rel="stylesheet" href="css/animal-card.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="header" id="header"></header>
+
+    <main class="main">
+
+        <section class="pet-photo-section">
+          <div class="pet-photo-wrapper">
+            <img
+              src="assets/img/Izia.png"
+              alt="Фото тваринки Ізя"
+              class="pet-photo"
+            />
+          </div>
+          <div class="pet-actions">
+            <button onclick="favorite()" class="btn-gift-days"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="До Вподобаних">До вподобаних</button>
+            <button class="btn-gift-days"><img class="footer-icons" src="assets/img/home-icon.png" alt="До Вподобаних">Подарувати дім</button>
+          </div>
+        </section>
+    
+        <section class="pet-info-section">
+          <div class="pet-info-header">
+            <h1 class="pet-name">Ізя</h1>
+            <div class="pet-type">Котик</div>
+          </div>
+          <div class="pet-info-basic">
+            <p class="pet-descr"><strong>Стать:</strong>  дівчинка</p>
+            <p class="pet-descr"><strong>Вік:</strong>  1 рік</p>
+            <p class="pet-descr"><strong>Область:</strong>  Рівненська область</p>
+            <p class="pet-descr"><strong>Стан здоров’я:</strong>  Здорова</p>
+            <p class="pet-descr"><strong>Стерилізована:</strong>  Так</p>
+          </div>
+          <div class="pet-description">
+            <p>
+              <strong>Опис:</strong> Стерилізована, вакцинована, оброблена від бліх і глистів,
+              з лоточком на «ти» з першого і жодного промаху. Їй 1 рік і бачу – ще
+              трохи з часом їй, теплого місця, миски з їжею і простору, щоб побігати
+              і позаплигувати, дуже треба тепло і увага. А вона так ніжно розташовується,
+              обожнює теплі руки і в будь-якій момент готова розслабитись.
+            </p>
+          </div>
+
+          <div class="shelter-card">
+            <div class="shelter-head">
+              <div class="shelter-logo">
+                <img
+                  src="assets/img/zaklad_logo.png"
+                  alt="Аватар закладу"
+                  id="shelter-logo-img"
+                />
+              </div>
+              <div class="shelter-name">
+                <h2>Назва Закладу</h2>
+                <span class="italic">#категорія_закладу</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+		<nav class="footer__nav">
+			<div class="footer__nav-lists">
+				<h5 class="footer__nav__lists-heading">Navigation</h5>
+				<div class="footer__nav__lists__container">
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Допомогти</a></li>
+						<li class="footer__nav__item"><a href="#">Блог</a></li>
+					</ul>
+					<ul class="footer__nav__list">
+						<li class="footer__nav__item"><a href="#">Новини</a></li>
+						<li class="footer__nav__item"><a href="#">Знайти тваринку</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="footer__nav__documents">
+				<li class="footer__nav__document"><a href="#">Copyright</a></li>
+				<li class="footer__nav__document"><a href="#">Privacy</a></li>
+				<li class="footer__nav__document"><a href="#">All right reserved</a></li>
+			</ul>
+		</nav>
+		<div class="footer__links">
+			<div class="footer__follow-us">
+				<h5 class="follow-us__heading">Слідкуйте за нами</h5>
+				<menu class="follow-us__menu">
+					<button class="follow-us__btn">
+						<img src="./assets/img/facebook.svg" alt="facebook" class="follow-us__btn-image facebook-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/google.svg" alt="google" class="follow-us__btn-image google-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/instagram.svg" alt="instagram" class="follow-us__btn-image instagram-img" />
+					</button>
+					<button class="follow-us__btn">
+						<img src="./assets/img/youtube.svg" alt="youtube" class="follow-us__btn-image youtube-img" />
+					</button>
+				</menu>
+			</div>
+			<div class="footer__contacts">
+				<h5 class="contacts__heading">Контакти</h5>
+				<p class="footer__contact">
+					Пані Олена:<br />
+					+380 (67) 843 2730
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
