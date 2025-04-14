@@ -449,3 +449,22 @@ body {
   .save-btn:hover {
 	background: #1E3F20;
   }
+
+  .add-btn {
+	display: none;
+	padding: 10px 20px;
+	margin: 0px 0px 20px 20px;
+	background: #345830;
+	color: white;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 8px;
+  }
+  
+  .add-btn:hover {
+	background: #1E3F20;
+  }
+
+.visible {
+	display: block !important;
+}
