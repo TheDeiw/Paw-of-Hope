@@ -17,10 +17,19 @@ if (localStorage.getItem("asVolunteer") === null) {
     localStorage.setItem("asVolunteer", "false");
 }
 
-function checkIfFromCetPage() {
+function checkIfFromCetPageChat() {
     const referrer = document.referrer;
 
     if (referrer.includes("cabinet-chat.html")) {
+		return true;
+    } else {
+		return false;
+    }
+}
+function checkIfFromCetPageFingShelter() {
+    const referrer = document.referrer;
+
+    if (referrer.includes("search-company.html")||referrer.includes("animal-card.html")) {
 		return true;
     } else {
 		return false;
@@ -43,7 +52,7 @@ function changeHeader() {
     const isInstitution = localStorage.getItem("isInstitution") === "true";
 	const asVolunteer = localStorage.getItem("asVolunteer") === "true";
     const asInstitution = localStorage.getItem("asInstitution") === "true";
-	console.log(Registered, Visitor, isVolunteer, isInstitution);
+	console.log(`Registered = ${Registered}\nVisitor = ${Visitor} \nisVolunteer = ${isVolunteer} \nisInstitution = ${isInstitution} \nasVolunteer = ${asVolunteer} \nasInstitution = ${asInstitution}`);
     if (Registered) {
         if (document.getElementById("header")) {
             document.getElementById("header").innerHTML = `
@@ -170,7 +179,7 @@ function changeHeader() {
             document.getElementById("header").innerHTML = `
     			<div class="header__container">
 				<div class="header__logo">
-					<img src="./assets/img/logo.svg" alt="Logo" class="logo__image" />
+					<a href="index.html"><img src="./assets/img/logo.svg" alt="Logo" class="logo__image" /></a>
 				</div>
 	
 				<nav class="header__nav">
@@ -217,6 +226,22 @@ function changeHeader() {
 		`;
         }
     }
+	if(checkIfFromCetPageFingShelter()){
+		if(document.getElementById("edit-profile-btn")){
+			document.getElementById("edit-profile-btn").style.display = "none";
+		}
+		if(document.getElementById("btn_chat")){
+			document.getElementById("btn_chat").style.display = "none";
+		}
+		if(document.getElementsByClassName("add-btn")[0]){
+			document.getElementsByClassName("add-btn")[0].style.display = "none";
+		}
+		if (document.getElementsByClassName("shelter-info-footer")[0]) {
+            document.getElementsByClassName("shelter-info-footer")[0].innerHTML = `
+		<button onclick="favorite()" class="btn-secondary"><img class="footer-icons" src="assets/img/favorites-icon.svg" alt="Вподобані">До вподобаних</button>
+		`;
+        }
+	}
 }
 
 // function submitAnApplication() {
@@ -229,7 +254,7 @@ function changeHeader() {
 // }
 
 function favorite() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
@@ -242,7 +267,7 @@ function favorite() {
 }
 
 function addAnimal() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
@@ -250,29 +275,29 @@ function addAnimal() {
 }
 
 function register_volunteer() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
     localStorage.setItem("isRegistered", "true");
     localStorage.setItem("isVolunteer", "true");
 	localStorage.setItem("asVolunteer", "true");
-    goToNextPage("searchPet.html");
+    goToNextPage("index.html");
 }
 
 function register_institution() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
     localStorage.setItem("isRegistered", "true");
     localStorage.setItem("isInstitution", "true");
 	localStorage.setItem("asInstitution", "true");
-    goToNextPage("searchPet.html");
+    goToNextPage("index.html");
 }
 
 function exit() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
@@ -284,21 +309,20 @@ function exit() {
 }
 
 function createAdvert() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
     const isRegistered = localStorage.getItem("isRegistered") === "true";
     if (isRegistered) {
         goToAccount();
-        goToNextPage("cabinet-volunteer.html");
     } else {
         goToNextPage("registration_volunteer.html");
     }
 }
 
 function goToAccount() {
-	if(checkIfFromCetPage()){
+	if(checkIfFromCetPageChat()){
 		localStorage.setItem("isVolunteer", "true");
 		localStorage.setItem("isInstitution", "false");
 	}
@@ -319,5 +343,11 @@ function openChat() {
 	goToNextPage("cabinet-chat.html");
 }
 
-function openClientShelter(){
+function openAccShelter(){
+	if(checkIfFromCetPageChat()){
+		localStorage.setItem("isVolunteer", "true");
+		localStorage.setItem("isInstitution", "false");
+	}
+	localStorage.setItem("isVolunteer", "true");
+	goToNextPage("cabinet-shelter.html");
 }
