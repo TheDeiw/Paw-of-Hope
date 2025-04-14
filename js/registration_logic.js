@@ -4,6 +4,12 @@ if (localStorage.getItem("isRegistered") === null) {
 if (localStorage.getItem("isVisitor") === null) {
 	localStorage.setItem("isVisitor", "false");
 }
+if (localStorage.getItem("isVolunteer") === null) {
+	localStorage.setItem("isVolunteer", "false");
+}
+if (localStorage.getItem("isInstitution") === null) {
+	localStorage.setItem("isInstitution", "false");
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     changeHeader();
@@ -29,10 +35,10 @@ function changeHeader() {
 				<nav class="header__nav">
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a href="#">Новини</a>
+							<a href="news.html">Новини</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Пошук організації</a>
+							<a href="search-company.html">Пошук організації</a>
 						</li>
 						<li class="nav__item">
 							<a href="searchPet.html">Знайти тваринку</a>
@@ -47,7 +53,7 @@ function changeHeader() {
 				</nav>
 
 				<div class="header__user" class="user">
-					<a href="cabinet-volunteer.html"> <img class="logo__image" src="assets/img/zaklad_logo.png"/></a>
+					<a onclick="goToAccount()" href="#"> <img class="logo__image" src="assets/img/zaklad_logo.png"/></a>
 				</div>
 	
 				<!-- Додати бургер-іконку тут -->
@@ -82,7 +88,6 @@ function changeHeader() {
 				document.getElementsByClassName("shelter-info-footer")[0].innerHTML =`
 					<button class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-settings-96 1.png" alt="налаштування">Налаштування</button>
 					<button onclick="exit()" class="btn-secondary"><img class="footer-icons" src="assets/img/icons8-emergency-exit-96.png" alt="Вийти">Вийти з акаунту</button>
-				
 				`;
 			}
 			if(document.getElementsByClassName("animal-list")[0]){
@@ -107,10 +112,10 @@ function changeHeader() {
 				<nav class="header__nav">
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a href="#">Новини</a>
+							<a href="news.html">Новини</a>
 						</li>
 						<li class="nav__item">
-							<a href="#">Пошук організації</a>
+							<a href="search-company.html">Пошук організації</a>
 						</li>
 						<li class="nav__item">
 							<a href="searchPet.html">Знайти тваринку</a>
@@ -126,7 +131,7 @@ function changeHeader() {
 	
 				<menu class="header__auth-menu">
 					<button class="auth-menu__btn green-btn login-btn">Увійти</button>
-					<button onclick="window.location.href='registration_institution.html'" class="auth-menu__btn green-btn register-btn">
+					<button onclick="window.location.href='registration_volunteer.html'" class="auth-menu__btn green-btn register-btn">
 						Зареєструватися
 					</button>
 				</menu>
@@ -174,14 +179,23 @@ function addAnimal(){
 	goToNextPage("create-advert.html");
 }
 
-function register(){
+function register_volunteer(){
 	localStorage.setItem("isRegistered", "true");
+	localStorage.setItem("isVolunteer", "true");
+	goToNextPage("searchPet.html");
+}
+
+function register_institution(){
+	localStorage.setItem("isRegistered", "true");
+	localStorage.setItem("isInstitution", "true");
 	goToNextPage("searchPet.html");
 }
 
 function exit(){
 	localStorage.setItem("isRegistered", "false");
 	localStorage.setItem("isVisitor", "false");
+	localStorage.setItem("isVolunteer", "false");
+	localStorage.setItem("isInstitution", "false");
 	goToNextPage("searchPet.html");
 }
 
@@ -189,5 +203,29 @@ function listAnimals(){
 	const isVisitor = localStorage.getItem("isVisitor") === "true";
 	if(isVisitor){
 
+	}
+}
+
+function createAdvert(){
+	const isRegistered = localStorage.getItem("isRegistered") === "true";
+	const isVolunteer = localStorage.getItem("isVolunteer") === "true";
+	const isInstitution = localStorage.getItem("isInstitution") === "true";
+	if(isRegistered){
+		goToAccount();
+		goToNextPage("cabinet-volunteer.html");
+	}
+	else{
+		goToNextPage("registration_volunteer.html");
+	}
+}
+
+function goToAccount(){
+	const isVolunteer = localStorage.getItem("isVolunteer") === "true";
+	const isInstitution = localStorage.getItem("isInstitution") === "true";
+	if(isVolunteer){
+		goToNextPage("cabinet-volunteer.html");
+	}
+	if(isInstitution){
+		goToNextPage("cabinet-shelter.html");
 	}
 }
