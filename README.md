@@ -11,6 +11,9 @@
 >  
 Перегляд сайту на Github pages: https://thedeiw.github.io/Paw-of-Hope/
 
+<img width="1920" height="1080" alt="Thumbnail" src="https://github.com/user-attachments/assets/7eb5370d-f3b6-466e-baec-5d21c9a2dcbd" />
+
+Перегляд дизайну: https://www.figma.com/community/file/1497146135834342247/paw-of-hope-pet-adoption-volunteer-platform
 <br>
 
 ## Інструкція з запуску локально
